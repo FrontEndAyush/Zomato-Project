@@ -1,3 +1,13 @@
+const scroll = new LocomotiveScroll({
+    el: document.querySelector('#main'),
+    smooth: true
+});
+
+
+window.addEventListener("mousemove", (details) =>{
+    let circle = document.querySelector(".circle")
+    circle.style.transform = `translate(${details.clientX}px, ${details.clientY}px)`
+    })
 
 let currentIndexForHeader = 0
 let currentIndex = 0
@@ -22,9 +32,9 @@ function automaticCustomerReviewChanger() {
     imagefile.src = arrOfImages[currentIndex]
     paragraph.textContent = arrOfParagraph[currentIndex]
     name.textContent = arrOfNames[currentIndex]
-    profession.textContent  = arrOfProfession[currentIndex]
+    profession.textContent = arrOfProfession[currentIndex]
 }
-setInterval(() => {automaticCustomerReviewChanger()},3000)
+setInterval(() => { automaticCustomerReviewChanger() }, 3000)
 
 
 function rightarrow() {
@@ -51,7 +61,7 @@ function leftarrow() {
     imagefile.src = arrOfImages[currentIndex]
     paragraph.textContent = arrOfParagraph[currentIndex]
     name.textContent = arrOfNames[currentIndex]
-    profession.textContent  = arrOfProfession[currentIndex]
+    profession.textContent = arrOfProfession[currentIndex]
 }
 
 function coloringHeader() {
@@ -144,5 +154,5 @@ setInterval(() => {
 
     automaticCustomerReviewChanger()
 
-},3000)
+}, 3000)
 
