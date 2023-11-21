@@ -13,7 +13,6 @@ function automaticCustomerReviewChanger() {
     let arrOfNames = ["Jasmeet Singh", "Raghudeep Singh", "Pardeep Singh"]
     let arrOfProfession = ["Owner - Pick and Move, Udaipur", "Owner - Run and Eat, Udaipur", "Owner - Lyrically and Musically, Udaipur"]
 
-
     if (currentIndex >= 2) {
         currentIndex = 0
     }
@@ -25,11 +24,7 @@ function automaticCustomerReviewChanger() {
     name.textContent = arrOfNames[currentIndex]
     profession.textContent  = arrOfProfession[currentIndex]
 }
-setInterval(() => {
-
-    automaticCustomerReviewChanger()
-
-},3000)
+setInterval(() => {automaticCustomerReviewChanger()},3000)
 
 
 function rightarrow() {
