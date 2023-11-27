@@ -25,7 +25,7 @@ const throttleFunction = (func, delay) => {
 
         const windowWidth = window.innerWidth;
 
-        if (windowWidth < 480) {
+        if (windowWidth < 1000) {
 
             return;
         }
@@ -159,7 +159,7 @@ function showNavIcons() {
 
 
     selectingNav.style.height = "100vh"
-    selectingNav.style.width = "100vw"
+    selectingNav.style.width = "100%"
     selectingNav.style.flexDirection = "column"
     selectingNav.style.backgroundColor = "black"
     selectingNav.style.position = "absolute"
