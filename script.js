@@ -4,10 +4,10 @@ const scroll = new LocomotiveScroll({
 });
 
 
- window.addEventListener("mousemove", (details) =>{
+window.addEventListener("mousemove", (details) => {
     let circle = document.querySelector(".circle")
     circle.style.transform = `translate(${details.clientX}px, ${details.clientY}px)`
-     })
+})
 
 
 
@@ -23,12 +23,12 @@ const throttleFunction = (func, delay) => {
 
         console.log(now - prev, delay);
 
-const windowWidth = window.innerWidth;
+        const windowWidth = window.innerWidth;
 
-if (windowWidth < 480) {
-   
-    return;
-}
+        if (windowWidth < 480) {
+
+            return;
+        }
 
         if (now - prev > delay) {
             prev = now;
@@ -46,14 +46,14 @@ document.body.addEventListener("mousemove", throttleFunction((details) => {
     let img = document.createElement("img")
     let arrOfImages = ["imageF/1.jpg", "imageF/2.jpg", "imageF/3.jpg", "imageF/4.jpg", "imageF/5.jpg"]
     let randomImage = arrOfImages[Math.floor(Math.random() * arrOfImages.length)]
-    img.setAttribute("src",randomImage)
+    img.setAttribute("src", randomImage)
     div.append(img)
     div.classList.add("imageFile")
     document.body.append(div)
 
-    setTimeout(() =>{
+    setTimeout(() => {
         div.remove()
-    },700)
+    }, 700)
 }, 100));
 
 
@@ -159,6 +159,7 @@ function showNavIcons() {
 
 
     selectingNav.style.height = "100vh"
+    selectingNav.style.width = "100vw"
     selectingNav.style.flexDirection = "column"
     selectingNav.style.backgroundColor = "black"
     selectingNav.style.position = "absolute"
